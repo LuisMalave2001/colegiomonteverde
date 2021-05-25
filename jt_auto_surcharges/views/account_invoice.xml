@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inv_sur_inherit_form" model="ir.ui.view">
+            <field name="name">inv.surcharge.inherit.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="team_id" position="after">
+                    <field name="surcharge_related_inv" attrs="{'invisible': [('type', '!=', 'out_invoice')]}"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

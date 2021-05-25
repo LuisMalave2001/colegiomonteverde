@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- invoice form View-->
+    <record model="ir.ui.view" id="account_invoice_form_view_inherited">
+        <field name="name">account.invoice.line.student.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <!-- <xpath expr="//field[@name='name']" position="after">
+                <field name="student_id" string="Student"/>
+            </xpath> -->
+            <field name="team_id" position="after">
+                <field name="student_id" string="Alumna"/>
+            </field>
+        </field>
+    </record>
+</odoo>
