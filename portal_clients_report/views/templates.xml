@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2020 Ketan Kachhela <l.kachhela28@gmail.com>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+
+    <template id="portal_my_invoices" inherit_id="account.portal_my_invoices" name="My Invoices and Payments">
+        <xpath expr="//thead//tr//th[1]" position="after">
+            <th>Invoices of the Months of:</th>
+            <th>Concepts</th>
+        </xpath>
+        <xpath expr="//tbody//tr//td[1]" position="after">
+            <td><span t-field="invoice.x_studio_mes_de_la_factura"/></td>
+            <td><span t-field="invoice.x_studio_concepto"/></td>
+        </xpath>
+    </template>
+
+</odoo>
